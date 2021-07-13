@@ -1,0 +1,35 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+//? &display=swap&subset=cyrillic-ext окончаник для Google Fonts
+
+@import "fonts";
+
+$fontFamily : "";  //! Шрифт по умолчанию в body
+
+@import 'modern-reset';
+@import "vars";
+
+body{
+	font-family: $fontFamily;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0)
+}
+
+@import "burger";
