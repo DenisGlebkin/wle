@@ -1,0 +1,268 @@
+.footer {
+	padding: 40px 0;
+	background-color: $primary-400;
+	// .footer__content
+
+	&__content {
+		display: grid;
+		grid-template-columns: auto minmax(auto, 700px) auto;
+		grid-auto-rows: auto;
+	}
+
+	// .footer__logo
+
+	&__logo {
+		align-self: center;
+
+		@media (min-width: 768px){
+			align-self: start;
+			grid-column: 1;
+			grid-row: 1;
+		}
+	}
+
+	// .footer__menu
+
+	&__menu {
+		grid-column: 1 / span 3;
+		// grid-row: 2;
+		@media (min-width: 768px){
+			grid-column: 2 / span 1;
+			grid-row: 1 / span 2;
+			margin: 0 30px;
+		}
+	}
+
+	// .footer__contacts
+
+	&__contacts {
+		grid-row: 2;
+		grid-column: span 2;
+
+		@media (min-width: 576px){
+			grid-row: 1;
+			grid-column: span 1;
+		}
+	}
+
+	// .footer__info
+
+	&__info {
+		grid-column: 1 / span 2;
+		grid-row: 1;
+		align-self: center;
+		
+		
+
+		@media (min-width: 768px){
+			justify-self: start;
+			align-self: end;
+			grid-column: 1;
+			grid-row: 2;
+			margin: 0;
+		}
+
+		@media (min-width: 576px){
+			grid-column: 2 / span 1;
+			justify-self: center;
+			margin: 0 15px;
+		}
+	}
+
+	// .footer__soical
+
+	&__soical {
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		color: $accent-100;
+		padding-top: 20px;
+		grid-column: span 3;
+		justify-self: center;
+	}
+}
+
+.footer-menu {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	color: $accent-100;
+	padding-top: 15px;
+
+	@media (min-width: 768px){
+		padding-top: 0;
+	}
+	// .footer-menu__item
+
+	&__item {
+		margin-bottom: 15px;
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+	}
+
+	// .footer-menu__label
+
+	&__label {
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 10px;
+
+		@media (min-width: 768px){
+			font-size: 18px;
+		}
+	}
+
+	// .footer-menu__list
+
+	&__list {}
+
+	// .footer-menu__list-item
+
+	&__list-item {
+		line-height: 1;
+
+		&:not(:last-child){
+			margin-bottom: 8px;
+		}
+	}
+
+	// .footer-menu__list-item-link
+
+	&__list-item-link {
+		text-decoration: none;
+		color: inherit;
+		font-size: 14px;
+		line-height: 1;
+		position: relative;
+
+		@media(any-hover: hover){
+			&::before{
+				content: "";
+				width: 0;
+				height: 1px;
+				background-color: $accent-100;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width .4s;
+			}
+
+			&:hover::before{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.contacts-footer {
+	padding-top: 10px;
+	color: $accent-100;
+	font-size: 14px;
+
+	@media (min-width: 576px){
+		font-size: 14px;
+		text-align: right;
+		padding-top: 0;
+	}
+	// .contacts-footer__inner
+
+	&__inner {
+		display: inline-block;
+		text-align: left;
+	}
+
+	// .contacts-footer__heading
+
+	&__heading {}
+
+	// .contacts-footer__item
+
+	&__item {}
+
+	// .contacts-footer__item-label
+
+	&__item-label {}
+
+	// .contacts-footer__item-link
+
+	&__item-link {
+		text-decoration: none;
+		color: $accent-100;
+		position: relative;
+		white-space: nowrap;
+
+		@media(any-hover: hover){
+			&::before {
+				content: "";
+				width: 0;
+				height: 1px;
+				background-color: $accent-100;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				transition: width .4s;
+			}
+
+			&:hover::before{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.social-menu {
+	display: flex;
+	flex-wrap: wrap;
+	// .social-menu__item
+
+	&__item {
+		margin: 5px;
+
+		@media (min-width: 768px){
+			margin: 0;
+
+			&:not(:last-child) {
+				margin-right: 20px;
+			}
+		}
+		
+	}
+
+	// .social-menu__item-link
+
+	&__item-link {
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-color: $accent-100;
+		background-repeat: no-repeat;
+		background-position: center;
+		border-radius: 50%;
+		// .social-menu__item-link--instagram
+
+		&--instagram {
+			background-image: url(../images/icons/socials/instagram.svg);
+		}
+
+		// .social-menu__item-link--telegram
+
+		&--telegram {
+			background-image: url(../images/icons/socials/telegram.svg);
+		}
+
+		// .social-menu__item-link--viber
+
+		&--viber {
+			background-image: url(../images/icons/socials/viber.svg);
+		}
+
+		// .social-menu__item-link--whatsup
+
+		&--whatsapp {
+			background-image: url(../images/icons/socials/whatsapp.svg);
+		}
+	}
+}

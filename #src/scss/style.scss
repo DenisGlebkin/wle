@@ -12,13 +12,18 @@
 
 @import "fonts";
 
-$fontFamily : "";  //! Шрифт по умолчанию в body
+$fontFamily : 'Nunito', sans-serif;  //! Шрифт по умолчанию в body
 
 @import 'modern-reset';
 @import "vars";
 
 body{
 	font-family: $fontFamily;
+	background-color: $accent-100;
+
+	&.active{
+		overflow: hidden;
+	}
 }
 
 .visually-hidden {
@@ -33,3 +38,12 @@ body{
 }
 
 @import "burger";
+@import "main";
+@import "header";
+@import "trends";
+@import "start-section";
+@import "subscribe";
+@import "footer";
+@import "filters";
+@import "product-list";
+@import "product";

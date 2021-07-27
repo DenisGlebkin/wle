@@ -1,0 +1,440 @@
+@@include("_header.html",{
+	"title": "Столы"
+})
+<div class="page-content">
+	<div class="container">
+		<div class="page-content__header">
+			<h1 class="page-content__title title">Столы</h1>
+			<button type="button" aria-labal="filters button" class="page-content__filters-btn">@@include("images/icons/filter.svg")</button>
+			<div class="page-content__sort-select">
+				<select name="sort" class="sort-select">
+					<option class="sort-select__option" value="priceUp">возрастанию цены</option>
+					<option class="sort-select__option" value="priceDown">убыванию цены</option>
+					<option class="sort-select__option" value="popularity" selected>популярности</option>
+					<option class="sort-select__option" value="last">последние</option>
+				</select>
+			</div>
+		</div>
+		<div class="page-content__body">
+			<div class="page-content__popup-bg popup-bg"></div>
+			<aside class="page-content__filters">
+				<div class="page-content__filters-selected selected-filters"></div>
+				<form action="#" class="filters">
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Наличие</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="stock" class="visually-hidden" value="ready">
+								<span class="checkbox__label">готово к отправке</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="stock" class="visually-hidden" value="up7Days">
+								<span class="checkbox__label">до 7 дней на изготовление</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="stock" class="visually-hidden" value="from7Days">
+								<span class="checkbox__label">от 7 дней на изготовление</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Тип</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="type" class="visually-hidden" value="table">
+								<span class="checkbox__label">нераскладной стол</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="type" class="visually-hidden" value="foldingTable">
+								<span class="checkbox__label">раскладной стол</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="type" class="visually-hidden" value="kit">
+								<span class="checkbox__label">комплект (стол+стулья)</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Форма</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="shape" class="visually-hidden" value="square">
+								<span class="checkbox__label">квадратный</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="shape" class="visually-hidden" value="rectangle">
+								<span class="checkbox__label">прямоугольный</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="shape" class="visually-hidden" value="circle">
+								<span class="checkbox__label">круглый</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Материал столешницы</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="materials" class="visually-hidden" value="wood">
+								<span class="checkbox__label">дерево</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="materials" class="visually-hidden" value="glass">
+								<span class="checkbox__label">стекло</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="materials" class="visually-hidden" value="resin">
+								<span class="checkbox__label">эпоксидная смола</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="materials" class="visually-hidden" value="metal">
+								<span class="checkbox__label">металл</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Ширина стола (см)</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="width" class="visually-hidden" value="xs">
+								<span class="checkbox__label">100 и менее</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="width" class="visually-hidden" value="s">
+								<span class="checkbox__label">101-140</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="width" class="visually-hidden" value="m">
+								<span class="checkbox__label">141-160</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="width" class="visually-hidden" value="l">
+								<span class="checkbox__label">161-200</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="width" class="visually-hidden" value="xl">
+								<span class="checkbox__label">201 и более</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Высота стола (см)</div>
+						<div class="filter__body">
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="height" class="visually-hidden" value="low">
+								<span class="checkbox__label">70 и менее</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="height" class="visually-hidden" value="middle">
+								<span class="checkbox__label">71-80</span>
+							</label>
+							<label class="filter__checkbox checkbox">
+								<input type="checkbox" name="height" class="visually-hidden" value="high">
+								<span class="checkbox__label">81 и более</span>
+							</label>
+						</div>
+					</div>
+					<div class="filters__filter filter">
+						<div class="filter__name shown">Цена</div>
+						<div class="filter__body">
+							<div class="filter__price-values">
+								<label class="filter__price">
+									<span class="filter__price-label">от</span>
+									<div class="filter__price-input-wrapper">
+										<input type="text" name="price-min" value="0" class="filter__price-input">
+									</div>
+								</label>
+								<label class="filter__price">
+									<span class="filter__price-label">до</span>
+									<div class="filter__price-input-wrapper">
+										<input type="text" name="price-max" value="100" class="filter__price-input">
+									</div>
+								</label>
+							</div>
+							<div class="filter__price-slider-wrapper">
+								<div class="filter__price-slider"></div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</aside>
+
+			<div class="page-content__product-list product-list">
+				<div class="product-list__content">
+					<div class="produ ct-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_1.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Dark K»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">12 300</span>
+								<span class="product-prices__price product-prices__price--old">13 720</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_2.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Круглый журнальный
+									столикс заливкой эпоксидной смолой</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">6 000</span>
+								<span class="product-prices__price product-prices__price--old">7 500</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_3.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Изумрудный эпоксидный
+									стол «Green Galaxy»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">21 800</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_4.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кухонный стол из
+									натурального дерева</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">6 700</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_5.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Blue L»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">15 000</span>
+								<span class="product-prices__price product-prices__price--old">16 700</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_6.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Обеденный стол с лавками
+									из натурального дерева</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">8 350</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-50%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_7.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Стол из эпоксидной смолы
+									«Island»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">15 000</span>
+								<span class="product-prices__price product-prices__price--old">35 000</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_8.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Консольный стол,
+									гостинная мебель «Wide B»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">22 700</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_9.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Винтажный плетеный
+									соломеный столик</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">2 930</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-15%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_10.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Deep O»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">23 000</span>
+								<span class="product-prices__price product-prices__price--old">30 000</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_11.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Обеденный стол из
+									деревасо стульями и лавкой</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">17 350</span>
+								<span class="product-prices__price product-prices__price--old">13 720</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_12.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой “Green B”</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">14 500</span>
+								<span class="product-prices__price product-prices__price--old">16 200</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_13.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Раскладной стол для
+									настольных игр</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">23 450</span>
+								<span class="product-prices__price product-prices__price--old">13 720</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-30%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_14.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Натуральный ореховый
+									журнальный стол</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">19 700</span>
+								<span class="product-prices__price product-prices__price--old">27 500</span>
+							</div>
+						</div>
+					</div>
+					<div class="product-list__item product-card">
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/products/product_15.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Обеденный стол с
+									заливкой эпоксидной смолой «Two Rivers»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">17 800</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="product-list__footer">
+					<div class="paginations">
+						<a href="#" class="paginations__item">&lt;</a>
+						<a href="#" class="paginations__item">1</a>
+						<a href="#" class="paginations__item">2</a>
+						<a href="#" class="paginations__item">3</a>
+						<a href="#" class="paginations__item">4</a>
+						<a href="#" class="paginations__item">5</a>
+						<span class="paginations__item">&hellip;</span>
+						<a href="#" class="paginations__item">12</a>
+						<a href="#" class="paginations__item">&gt;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+@@include("_footer.html")

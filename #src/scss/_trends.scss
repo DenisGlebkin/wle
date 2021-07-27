@@ -1,0 +1,48 @@
+.trends {
+	background: url(../images/trends/trends-bg.jpg) no-repeat center / cover;
+	padding-bottom: 30px;
+
+	// .trends__сontent
+
+	&__content {}
+
+	// .trends__list
+
+	&__list {}
+
+	// .trends__list-item
+
+	&__list-item {
+		max-width: 300px;
+	}
+
+	// .trends__paginations
+
+	&__paginations {
+		display: flex;
+		justify-content: center;
+		padding-top: 77px;
+	}
+
+	// .trends__paginations-item
+
+	&__paginations-item {
+		max-width: 50px;
+		width: 100%;
+		height: 0;
+		border: 3px solid rgba($accent-100, .6);
+		border-radius: 6px;
+		cursor: pointer;
+		margin-bottom: 10px;
+
+		&:not(:last-child){
+			margin-right: 15px;
+		}
+		// .trends__paginations-item--active
+
+		&--active {
+			border-color: $accent-100;
+		}
+	}
+}
+

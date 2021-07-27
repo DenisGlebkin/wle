@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Document description">
+	<title>@@title</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="libs/nice-select.css">
+	<link rel="stylesheet" href="libs/nouislider/nouislider.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.0-alpha.4/dist/fancybox.css">
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header__body">
+					@@include("_burger.html")
+					<div class="header__popup-bg popup-bg"></div>
+					<div class="header__menu">
+						<nav class="menu">
+							<ul class="menu__list">
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-item-link">Украшения</a>
+									<div class="menu__submenu">
+										<ul class="submenu">
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Ожерелья</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Кольца</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Серьги</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Браслеты</a></li>
+										</ul>
+									</div>
+									<span class="menu__submenu-icon">
+										@@include("images/icons/arrow-down.svg")
+									</span>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-item-link">Мебель</a>
+									<div class="menu__submenu">
+										<ul class="submenu">
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Столы</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Стулья</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Изголовья</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Офисная мебель</a></li>
+										</ul>
+									</div>
+									<span class="menu__submenu-icon">
+										@@include("images/icons/arrow-down.svg")
+									</span>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-item-link">Освещение</a>
+									<div class="menu__submenu">
+										<ul class="submenu">
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Бра</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Лампы</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Люстры</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Ночнки</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Светильники</a></li>
+										</ul>
+									</div>
+									<span class="menu__submenu-icon">
+										@@include("images/icons/arrow-down.svg")
+									</span>
+								</li>
+								<li class="menu__list-item">
+									<a href="#" class="menu__list-item-link">Настенный декор</a>
+									<div class="menu__submenu">
+										<ul class="submenu">
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Картины</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Часы</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Панно</a></li>
+											<li class="submenu__item"><a href="#" class="submenu__item-link">Полки</a></li>
+										</ul>
+									</div>
+									<span class="menu__submenu-icon">
+										@@include("images/icons/arrow-down.svg")
+									</span>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__logo-wrapper">
+						<a href="#" class="header__logo logo">
+							<img src="./images/logo.png" alt="logo" class="logo__img">
+						</a>
+					</div>
+					<form class="header__search search" data-da=".header__menu, 767, first">
+						<input type="text" class="search__input" placeholder="Поиск товаров">
+						<button type="submit" class="search__submit icon-search"></button>
+					</form>
+					<div class="header__actions actions">
+						<a href="#" class="actions__btn actions__btn--cart" aria-label="cart button"></a>
+						<a href="#" class="actions__btn actions__btn--account" aria-label="account button"></a>
+					</div>
+				</div>
+			</div>
+		</header>

@@ -1,0 +1,110 @@
+.subscribe {
+	text-align: center;
+	color: $accent-500;
+	padding: 40px 0;
+	background-color: $primary-100;
+	margin-top: 80px;
+
+	@media (min-width: 576px){
+		padding: 60px 0;
+		margin-top: 120px;
+	}
+	// .subscribe__content
+
+	&__content {
+		max-width: 850px;
+		margin: 0 auto;
+	}
+	// .subscribe__heading
+
+	&__heading {
+		font-size: 32px;
+		line-height: 1.22;
+		font-weight: 400;
+		margin-bottom: 20px;
+		
+		@media (min-width: 576px){
+			font-size: 36px;
+		}
+	}
+
+	// .subscribe__description
+
+	&__description {
+		font-size: 14px;
+		max-width: 500px;
+		margin: 0 auto 20px;
+
+		@media (min-width: 576px){
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+	}
+
+	// .subscribe__form
+
+	&__form {}
+}
+
+.subscribe-form {
+	text-align: left;
+	// .subscribe-form__label
+
+	&__label {
+		color: $primary-200;
+		font-size: 16px;
+		padding-left: 20px;
+	}
+
+	// .subscribe-form__footer
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+
+		@media (min-width: 576px){
+			flex-wrap: nowrap;
+		}
+	}
+
+	// .subscribe-form__input-wrapper
+
+	&__input-wrapper {
+		flex: 1 1 100%;
+		height: 56px;
+		margin-bottom: 20px;
+
+		@media (min-width: 576px){
+			flex: 1 1 auto;
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+	}
+
+	// .subscribe-form__input
+
+	&__input {
+		width: 100%;
+		height: 100%;
+		border: 1px solid $primary-200;
+		border-radius: 28px;
+		padding: 0 20px;
+
+		&:focus{
+			outline: none;
+		}
+	}
+
+	// .subscribe-form__btn
+
+	&__btn {
+		margin: 0 auto;
+
+		@media (min-width: 576px){
+			margin: 0;
+		}
+	}
+}
+
+

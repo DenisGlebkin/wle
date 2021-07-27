@@ -1,23 +1,19 @@
 .burger-menu {
 	width: 30px;
 	height: 20px;
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	z-index: 99;
 
-	@media (max-width: 991px) {
-		display: flex;
+	@media (min-width: 992px){
+		display: none;
 	}
 
 	&--active {
 		justify-content: center;
-
-		.burger-menu__line {
-			background-color: #fff;
-		}
 
 		.burger-menu__line:first-child {
 			transform: rotate(45deg);
@@ -39,7 +35,7 @@
 	&__line {
 		width: 100%;
 		height: 2px;
-		background-color: #1a1a1a;
+		background-color: $primary-400;
 		transition: all .5s;
 	}
 }

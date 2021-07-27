@@ -1,18 +1,567 @@
-<!DOCTYPE html>
-<html lang="en">
+@@include("_header.html",{
+	"title": "WLE"
+})
+<main class="page-content">
+	<section class="trends">
+		<div class="container">
+			<div class="trends__content swiper-container">
+				<div class="trends__header section-header">
+					<h1 class="section-header__title title title--sm title--light">Тренд этого года</h1>
+					<a href="#" class="section-header__permalink section-header__permalink--light">Показать еще</a>
+				</div>
+				<ul class="trends__list swiper-wrapper">
+					<li class="trends__list-item product-card swiper-slide">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_1.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Dark K»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">12 300</span>
+								<span class="product-prices__price product-prices__price--old">13 720</span>
+							</div>
+						</div>
+					</li>
+					<li class="trends__list-item product-card swiper-slide">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+						</div>
+						<button type="button"
+							class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="https://www.google.com" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_2.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Blue L»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">15 000</span>
+								<span class="product-prices__price product-prices__price--old">16 700</span>
+							</div>
+						</div>
+					</li>
+					<li class="trends__list-item product-card swiper-slide">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+						</div>
+						<button type="button"
+							class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="https://www.google.com" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_3.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Deep O»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">13 200</span>
+								<span class="product-prices__price product-prices__price--old">15 600</span>
+							</div>
+						</div>
+					</li>
+					<li class="trends__list-item product-card swiper-slide">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+						</div>
+						<button type="button"
+							class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="https://www.google.com" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_4.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой “Green B”</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">14 500</span>
+								<span class="product-prices__price product-prices__price--old">16 200</span>
+							</div>
+						</div>
+					</li>
+					<li class="trends__list-item product-card swiper-slide">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/trends/trends-product_1.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой «Dark K»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">12 300</span>
+								<span class="product-prices__price product-prices__price--old">13 720</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="trends__paginations">
+				</div>
+			</div>
+		</div>
+	</section>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Document description">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/style.min.css">
-		
-</head>
+	<section class="start-section">
+		<div class="container">
+			<div class="start-section__header section-header">
+				<h2 class="section-header__title title title--sm">Популярные изделия</h2>
+				<a href="#" class="section-header__permalink">Показать еще</a>
+			</div>
+			<div class="start-section__card-list card-list">
+					<div class="card-list__item card-list__item--xl product-card product-card--xl">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/popular/popular_1.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Изголовье кровати с
+									заливкой эпоксидной смолой «Wide Beach»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">27 780</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item product-card product-card--lg">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/popular/popular_2.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Кофейный столик с
+									заливкой эпоксидной смолой “Green B”</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">14 500</span>
+								<span class="product-prices__price product-prices__price--old">16 200</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item product-card product-card--lg">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/popular/popular_3.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Изумрудный эпоксидный
+									стол «Green Galaxy»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">21 800</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item card-list__item--xl product-card product-card--xl">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-10%</span>
+							<span class="product-labels__label product-labels__label--new">New</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/popular/popular_4.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Консольный стол,
+									гостинная мебель «Wide B»</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">22 700</span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
 
-<body>
-	
-	<script src="js/script.min.js"></script>
-</body>
+	<section class="start-section">
+		<div class="container">
+			<div class="start-section__header section-header">
+				<h2 class="section-header__title title title--sm">Украшения</h2>
+				<a href="#" class="section-header__permalink">Показать еще</a>
+			</div>
+			<div class="start-section__card-list card-list card-list--vertical">
+					<div class="card-list__item product-card product-card--md">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-50%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/jewelry/jewelry_1.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Позолоченое ожерелье с
+									вашими инициалами</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">2 500</span>
+								<span class="product-prices__price product-prices__price--old">5 000</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item card-list__item--vertical product-card product-card--vertical">
+						<div class="product-card__labels product-labels">
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/jewelry/jewelry_2.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Золотое ожерелье с
+									вашими инициалами</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">7 800</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item product-card product-card--md">
+						<div class="product-card__labels product-labels">
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/jewelry/jewelry_3.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Бисерный браслет с
+									позолочеными элементами</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">700</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item product-card product-card--md">
+						<div class="product-card__labels product-labels">
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/jewelry/jewelry_4.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Набор золотых летних
+									браслетов</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">600</span>
+							</div>
+						</div>
+					</div>
+					<div class="card-list__item product-card product-card--md">
+						<div class="product-card__labels product-labels">
+							<span class="product-labels__label product-labels__label--discount">-25%</span>
+						</div>
+						<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+						<a href="#" class="product-card__link">
+							<div class="product-card__img-wrapper">
+								<img src="images/jewelry/jewelry_5.jpg" alt="trend product" class="product-card__img">
+							</div>
+						</a>
+						<div class="product-card__info">
+							<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Золотые обручальные
+									кольца с камнем</a></h3>
+							<div class="product-card__prices product-prices">
+								<span class="product-prices__price">10 000</span>
+								<span class="product-prices__price product-prices__price--old">13 333</span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
 
-</html>
+	<section class="start-section">
+		<div class="container">
+			<div class="start-section__header section-header">
+				<h2 class="section-header__title title title--sm">Мебель</h2>
+				<a href="#" class="section-header__permalink">Показать еще</a>
+			</div>
+			<div class="start-section__card-list card-list">
+				<div class="card-list__item product-card product-card--lg">
+					<div class="product-card__labels product-labels">
+						<span class="product-labels__label product-labels__label--discount">-10%</span>
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/furniture/furniture_1.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Очень длинное название
+								товара “Green B”</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">14 500</span>
+							<span class="product-prices__price product-prices__price--old">16 200</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item card-list__item--xl product-card product-card--xl">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/furniture/furniture_2.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Изголовье кровати с
+								заливкой эпоксидной смолой «Wide Beach»</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">21 780</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item card-list__item--xl product-card product-card--xl">
+					<div class="product-card__labels product-labels">
+						<span class="product-labels__label product-labels__label--discount">-10%</span>
+						<span class="product-labels__label product-labels__label--new">New</span>
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/furniture/furniture_3.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Стол из эпоксидной смолы
+								«Island»</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">23 000</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item product-card product-card--lg">
+					<div class="product-card__labels product-labels">
+						<span class="product-labels__label product-labels__label--discount">-20%</span>
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/furniture/furniture_4.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Круглый журнальный
+								столикс заливкой эпоксидной смолой</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">6 000</span>
+							<span class="product-prices__price product-prices__price--old">7 500</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="start-section">
+		<div class="container">
+			<div class="start-section__header section-header">
+				<h2 class="section-header__title title title--sm">Освещение</h2>
+				<a href="#" class="section-header__permalink">Показать еще</a>
+			</div>
+			<div class="start-section__card-list card-list card-list--vertical">
+				<div class="card-list__item product-card product-card--md">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/lighting/lighting_1.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Минималистичная лампас
+								регулировкой цвета</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">4 700</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item card-list__item--vertical product-card product-card--vertical">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/lighting/lighting_2.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Лампа из натурального
+								грецкого ореха</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">6700</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item product-card product-card--md">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/lighting/lighting_3.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Светильник из трубы с
+								теплым светом</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">2 350</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item product-card product-card--md">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/lighting/lighting_4.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Круговая лампа с
+								настройкой подсветки</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">2 350</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item product-card product-card--md">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/lighting/lighting_5.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Минималистичные
+								светильники с регулировкой цвета</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">2 500</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="start-section">
+		<div class="container">
+			<div class="start-section__header section-header">
+				<h2 class="section-header__title title title--sm">Настенный декор</h2>
+				<a href="#" class="section-header__permalink">Показать еще</a>
+			</div>
+			<div class="start-section__card-list card-list">
+				<div class="card-list__item product-card product-card--lg">
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/wall-decor/wall-decor_1.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Абстрактная картина.
+								Акрил. Зеленое дерево</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">12 000</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item card-list__item--xl product-card product-card--xl">
+					<div class="product-card__labels product-labels">
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/wall-decor/wall-decor_2.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Деревянные настенные часы
+								прямоугольной формы</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">1 900</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item card-list__item--xl product-card product-card--xl">
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/wall-decor/wall-decor_3.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Объемные наклейки на
+								стенус вашим дизайном</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">2 500</span>
+						</div>
+					</div>
+				</div>
+				<div class="card-list__item product-card product-card--lg">
+					<div class="product-card__labels product-labels">
+						<span class="product-labels__label product-labels__label--discount">-30%</span>
+					</div>
+					<button type="button" class="product-card__wishlist-btn">@@include("images/icons/wishlist.svg")</button>
+					<a href="#" class="product-card__link">
+						<div class="product-card__img-wrapper">
+							<img src="images/wall-decor/wall-decor_4.jpg" alt="trend product" class="product-card__img">
+						</div>
+					</a>
+					<div class="product-card__info">
+						<h3 class="product-card__heading heading"><a href="#" class="product-card__heading-link">Парные картина на стену
+								«Cactus»</a></h3>
+						<div class="product-card__prices product-prices">
+							<span class="product-prices__price">300</span>
+							<span class="product-prices__price product-prices__price--old">450</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+@@include("_footer.html")
