@@ -71,7 +71,7 @@
 
 	// .footer__soical
 
-	&__soical {
+	&__social {
 	}
 
 	// .footer__copyright
@@ -241,6 +241,27 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		border-radius: 50%;
+
+		// .social-menu__item-link--primary
+		&--primary{
+			background-color: $primary-400;
+
+			&.social-menu__item-link--instagram{
+				background-image: url(../images/icons/socials/instagram-white.svg);
+			}
+
+			&.social-menu__item-link--telegram{
+				background-image: url(../images/icons/socials/telegram-white.svg);
+			}
+
+			&.social-menu__item-link--viber{
+				background-image: url(../images/icons/socials/viber-white.svg);
+			}
+
+			&.social-menu__item-link--whatsapp{
+				background-image: url(../images/icons/socials/whatsapp-white.svg);
+			}
+		}
 		// .social-menu__item-link--instagram
 
 		&--instagram {

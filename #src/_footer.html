@@ -1,22 +1,6 @@
-<section class="subscribe">
-	<div class="container">
-		<div class="subscribe__content">
-			<h2 class="subscribe__heading">Новые изделия и акции</h2>
-			<p class="subscribe__description">
-				Подписывайтесь на рассылку с новостями о новых изделияхи скидками на товары из вашего списка желаний
-			</p>
-			<form action="#" class="subscribe__form subscribe-form">
-				<label for="subscribeEmail" class="subscribe-form__label">Ваша электронная почта</label>
-				<div class="subscribe-form__footer">
-					<div class="subscribe-form__input-wrapper">
-						<input type="email" class="subscribe-form__input" id="subscribeEmail">
-					</div>
-					<button type="submit" class="subscribe-form__btn primary-btn">Подписаться</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</section>
+@@if(subscribe === true){
+	@@include("_subscribe.html")
+}
 
 	<footer class="footer">
 		<div class="footer__content container">
@@ -38,21 +22,21 @@
 					<div class="footer-menu__item">
 						<h2 class="footer-menu__label">Личный кабинет</h2>
 						<ul class="footer-menu__list">
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Личный кабинет</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Мои заказы</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Список желаний</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Просмотренные товары декор</a>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Мои отзывы</a>
+							<li class="footer-menu__list-item"><a href="./account.html" class="footer-menu__list-item-link">Личный кабинет</a></li>
+							<li class="footer-menu__list-item"><a href="./orders.html" class="footer-menu__list-item-link">Мои заказы</a></li>
+							<li class="footer-menu__list-item"><a href="./wishlist.html" class="footer-menu__list-item-link">Список желаний</a></li>
+							<li class="footer-menu__list-item"><a href="./viewed-products.html" class="footer-menu__list-item-link">Просмотренные товары декор</a>
+							<li class="footer-menu__list-item"><a href="./my-reviews.html" class="footer-menu__list-item-link">Мои отзывы</a>
 							</li>
 						</ul>
 					</div>
 					<div class="footer-menu__item">
 						<h2 class="footer-menu__label">О нас</h2>
 						<ul class="footer-menu__list">
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">О компании</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Изделия на заказ</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Контакты</a></li>
-							<li class="footer-menu__list-item"><a href="#" class="footer-menu__list-item-link">Доставка и оплата</a>
+							<li class="footer-menu__list-item"><a href="./about.html" class="footer-menu__list-item-link">О компании</a></li>
+							<li class="footer-menu__list-item"><a href="./custom-products.html" class="footer-menu__list-item-link">Изделия на заказ</a></li>
+							<li class="footer-menu__list-item"><a href="./contacts.html" class="footer-menu__list-item-link">Контакты</a></li>
+							<li class="footer-menu__list-item"><a href="./delivery.html" class="footer-menu__list-item-link">Доставка и оплата</a>
 							</li>
 						</ul>
 					</div>
@@ -71,15 +55,11 @@
 					</div>
 				</div>
 				<div class="footer__info">
-					<ul class="footer__soical social-menu">
-						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--instagram"
-								aria-label="instagram"></a></li>
-						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--telegram"
-								aria-label="telegram"></a></li>
-						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--viber"
-								aria-label="viber"></a></li>
-						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--whatsapp"
-								aria-label="whatsapp"></a></li>
+					<ul class="footer__social social-menu">
+						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--instagram" aria-label="instagram"></a></li>
+						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--telegram" 	aria-label="telegram"></a></li>
+						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--viber" aria-label="viber"></a></li>
+						<li class="social-menu__item"><a href="#" class="social-menu__item-link social-menu__item-link--whatsapp" aria-label="whatsapp"></a></li>
 					</ul>
 					<div class="footer__copyright" data-da=".footer__content, 767, last">©WLE Все права защищены</div>
 				</div>
@@ -89,6 +69,7 @@
 </div>
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="libs/jquery.nice-select.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	<script src="libs/nouislider/nouislider.min.js"></script>
 	<script src="libs/dynamicAdapt.js"></script>
 	<script src="libs/swiper/swiper-bundle.min.js"></script>

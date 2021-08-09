@@ -1,0 +1,143 @@
+@@include("_header.html",{
+	"title": "Личный кабинет"
+})
+
+<div class="page-content">
+	<div class="container">
+		<div class="page-content__control">
+			<main class="page-content__main-body main-body">
+				<div class="main-body__header">
+					<h1 class="main-body__title title">Личный кабинет</h1>
+				</div>
+				<form action="" class="main-body__form account-form">
+					<div class="account-form__header">
+						<div class="account-form__heading account-form__heading--acc heading">Личные данные</div>
+						<button type="button" class="account-form__edit-btn link">Редактировать</button>
+					</div>
+					<div class="account-form__list-item">
+						<div class="account-form__item">
+							<label for="surname" class="account-form__item-label">Фамилия</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="surname" name="surname" value="Скирко">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="name" class="account-form__item-label">Имя</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="name" name="name" value="Дмитрий">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="patronymic" class="account-form__item-label">Отчество</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="patronymic" name="patronymic" value="Юрьевич">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="gender" class="account-form__item-label">Пол</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="gender" name="gender" value="Мужской">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="birthDay" class="account-form__item-label">Дата рождения</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="birthDay" name="birthDay" value="24.02.1900">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="city" class="account-form__item-label">Населенный пункт</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="city" name="city" value="Днепр">
+							</div>
+						</div>
+					</div>
+					<div class="account-form__footer">
+						<button type="submit" class="account-form__submit-btn primary-btn primary-btn--s">Сохранить</button>
+						<button class="account-form__cancel-btn link link--l">Отменить</button>
+					</div>
+				</form>
+				<form action="" class="main-body__form account-form">
+					<div class="account-form__header">
+						<div class="account-form__heading account-form__heading--contact heading">Контакты</div>
+						<button type="button" class="account-form__edit-btn link">Редактировать</button>
+					</div>
+					<div class="account-form__list-item">
+						<div class="account-form__item">
+							<label for="phone" class="account-form__item-label">Номер телефона</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="tel" class="account-form__item-input" id="phone" name="phone" value="+38(098)-12-34-567">
+							</div>
+						</div>
+						<div class="account-form__item">
+							<label for="email" class="account-form__item-label">E-mail</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="email" class="account-form__item-input" id="email" name="email" value="dmitro.skirko@gmail.com">
+							</div>
+						</div>
+					</div>
+					<div class="account-form__footer">
+						<button type="submit" class="account-form__submit-btn primary-btn primary-btn--s">Сохранить</button>
+						<button class="account-form__cancel-btn link link--l">Отменить</button>
+					</div>
+				</form>
+				<form action="" class="main-body__form account-form">
+					<div class="account-form__header">
+						<div class="account-form__heading account-form__heading--delivery heading">Адрес доставки</div>
+						<button type="button" class="account-form__edit-btn link">Редактировать</button>
+					</div>
+					<div class="account-form__list-item">
+						<div class="account-form__item">
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="address" name="address" value="+38(098)-12-34-567">
+							</div>
+						</div>
+					</div>
+					<div class="account-form__footer">
+						<button type="submit" class="account-form__submit-btn primary-btn primary-btn--s">Сохранить</button>
+						<button class="account-form__cancel-btn link link--l">Отменить</button>
+					</div>
+				</form>
+				<form action="" class="main-body__form account-form">
+					<div class="account-form__header">
+						<div class="account-form__heading account-form__heading--bank heading">Банковские карты</div>
+						<button type="button" class="account-form__edit-btn link">Редактировать</button>
+					</div>
+					<div class="account-form__list-item">
+						<div class="account-form__item">
+							<label for="bank" class="account-form__item-label">мой приват</label>
+							<div class="account-form__item-input-wrapper">
+								<input type="text" class="account-form__item-input" id="bank" name="bank" value="+38(098)-12-34-567">
+							</div>
+						</div>
+					</div>
+					<div class="account-form__footer">
+						<button type="submit" class="account-form__submit-btn primary-btn primary-btn--s">Сохранить</button>
+						<button class="account-form__cancel-btn link link--l">Отменить</button>
+					</div>
+				</form>
+				<div class="main-body__footer">
+					<div class="main-body__footer-row">
+						<a href="#" class="main-body__link-change-pass link link--l">Сменить пароль</a>
+					</div>
+					<div class="main-body__footer-row">
+						<a href="#" class="main-body__link-logout link link--l">Выход</a>
+						<a href="#" class="main-body__link-del-acc link link--l">Удалить аккаунт</a>
+					</div>
+				</div>
+			</main>
+			@@include("_side-menu.html",{
+				"personalAccount": "active",
+				"orders": "",
+				"wishlist": "",
+				"viewedProducts": "",
+				"reviews": "",
+				"delivery": ""
+			})
+		</div>
+	</div>
+</div>
+
+@@include("_footer.html",{
+	"subscribe": false
+})

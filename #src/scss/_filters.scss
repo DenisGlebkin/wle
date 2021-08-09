@@ -180,6 +180,7 @@
 			height: 18px;
 			border: 1px solid $primary-200;
 			border-radius: 2px;
+			background-color: $accent-100;
 			cursor: pointer;
 			margin-right: 10px;
 			transition: all .3s;
@@ -199,6 +200,16 @@
 			transform-origin: center;
 			transform: rotate(-45deg);
 			cursor: pointer;
+			opacity: 0;
+		}
+
+		&:empty{
+			&::before{
+				margin-right: 0;
+			}
+			&::after{
+				top: 4px;
+			}
 		}
 
 		@media (min-width: 768px){
@@ -210,6 +221,10 @@
 		&::before{
 			background-color: $primary-400;
 			border-color: $primary-400;
+		}
+
+		&::after {
+			opacity: 1;
 		}
 	}
 

@@ -1,0 +1,41 @@
+@@include("_header.html",{
+"title": "Доставка и оплата"
+}")
+<div class="page-content">
+	<div class="container">
+		<div class="page-content__control">
+			<main class="page-content__main-body main-body">
+				<div class="main-body__delivery delivery">
+					<div class="delivery__info info-block">
+						<h2 class="info-block__title title">Условия доставки</h2>
+						<p class="info-block__description description">
+							Доставка осуществляется только способами, которые указаны при оформлении заказа.
+							Самовывоз доступен не только в Киеве. Это зависит от того в каком городе находится продавец. Откуда доступен
+							самовывоз указано на странице товара.
+						</p>
+					</div>
+					<div class="delivery__info info-block">
+						<h2 class="info-block__title title">Условия оплаты</h2>
+						<p class="info-block__description description">
+							Оплата при получении товара и наложеным платежом доступна только на товары, которые есть в наличии.
+							Онлайн оплата доступна на весь товар.
+							Если вы делаете индивидуальный заказ или заказываете товар, которого нет в наличии- производство товара начнется
+							только после предоплаты. Размер предоплаты определяется продавцом, но не может быть меньше 50%.
+						</p>
+					</div>
+				</div>
+			</main>
+			@@include("_side-menu.html",{
+			"personalAccount": "",
+			"orders": "",
+			"wishlist": "",
+			"viewedProducts": "",
+			"reviews": "",
+			"delivery": "active"
+			})
+		</div>
+	</div>
+</div>
+@@include("_footer.html",{
+"subscribe": false
+})

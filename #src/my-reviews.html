@@ -1,0 +1,98 @@
+@@include("_header.html",{
+"title": "Мои отзывы"
+}")
+<div class="page-content">
+	<div class="container">
+		<div class="page-content__control">
+			<main class="page-content__main-body main-body">
+				<div class="main-body__header">
+					<h1 class="main-body__title title">Мои отзывы</h1>
+				</div>
+				<div class="main-body__products-reviews products-reviews">
+					<div class="products-reviews__item review-product-item" data-review-product="true">
+						<div class="review-product-item__header">
+							<div class="review-product-item__thumbnail-wrapper">
+								<img src="images/product-reviews/product-thumbnail_1.jpg" alt="product thumbnail" class="review-product-item__thumbnail">
+							</div>
+							<h2 class="review-product-item__name">Голубые сережки “Капельки”</h2>
+							<div class="review-product-item__excerpt">все понравилось. обслуживание на высоте</div>
+						</div>
+						<div class="review-product-item__review reviews-product">
+							<div class="reviews-product__item">
+								<div class="reviews-product__item-review review">
+									<div class="review__body">
+										<div class="review__header">
+											<div class="review__author-name">Андрей</div>
+											<div class="review__rating">
+												<span class="review__rating-star"
+													aria-label="star rating">@@include("images/icons/rating-star.svg")</span>
+												<span class="review__rating-star"
+													aria-label="star rating">@@include("images/icons/rating-star.svg")</span>
+												<span class="review__rating-star"
+													aria-label="star rating">@@include("images/icons/rating-star.svg")</span>
+												<span class="review__rating-star"
+													aria-label="star rating">@@include("images/icons/rating-star.svg")</span>
+												<span class="review__rating-star review__rating-star--empty"
+													aria-label="star rating">@@include("images/icons/rating-star.svg")</span>
+											</div>
+											<div class="review__date">22/04/2021</div>
+										</div>
+										<p class="review__text">столик получился крутой. делали индивидуальный заказ, изготовили за 14 дней.
+											результат
+											получился то, что надо, так что ожидания стоили того. ставлю четыре звезды, потому что есть
+											небольшая царапина
+											на ножке. она, конечно, не на лицевой стороне, но я к таким вещам довольно придирчив. в целом очень
+											довольны,
+											спасибо за быстрый отклик!</p>
+										<div class="review__attachment">
+											<a href="images/product/product_l_1.jpg" class="review__attachment-link" data-fancybox="gallery">
+												<img src="images/product/product_l_1.jpg" alt="review image" class="review__attachment-img" width="60px" height="60px">
+											</a>
+											<a href="images/product/product_l_1.jpg" class="review__attachment-link" data-fancybox="gallery">
+												<img src="images/product/product_l_1.jpg" alt="review image" class="review__attachment-img" width="60px" height="60px">
+											</a>
+											<a href="images/product/product_l_1.jpg" class="review__attachment-link" data-fancybox="gallery">
+												<img src="images/product/product_l_1.jpg" alt="review image" class="review__attachment-img" width="60px" height="60px">
+											</a>
+										</div>
+										<a href="#" class="review__link link">Ответить</a>
+									</div>
+									<div class="review__reply review review--reply">
+										<div class="review__body">
+											<div class="review__header">
+												<div class="review__author-name review__author-name--team">Алексей</div>
+												<div class="review__date">22/04/2021</div>
+											</div>
+											<p class="review__text">Спасибо за отзыв, Андрей!</p>
+											<a href="#" class="review__link link">Ответить</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="products-reviews__item review-product-item">
+						<div class="review-product-item__header">
+							<div class="review-product-item__thumbnail-wrapper">
+								<img src="images/product-reviews/product-thumbnail_2.jpg" alt="product thumbnail" class="review-product-item__thumbnail">
+							</div>
+							<h2 class="review-product-item__name">Сережки синие с бирюзовыми вставками</h2>
+							<a href="#" class="review-product-item__create-review-btn primary-btn primary-btn--s">Написать отзыв</a>
+						</div>
+					</div>
+				</div>
+				</main>
+			@@include("_side-menu.html",{
+			"personalAccount": "",
+			"orders": "",
+			"wishlist": "",
+			"viewedProducts": "",
+			"reviews": "active",
+			"delivery": ""
+			})
+		</div>
+	</div>
+</div>
+@@include("_footer.html",{
+"subscribe": false
+})

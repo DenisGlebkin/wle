@@ -1,7 +1,28 @@
 @@include("_header.html",{
 	"title": "Not Found"
 })
-<div class="page-content">
-	<div class="container"></div>
-</div>
-@@include("_footer.html")
+<main class="page-content">
+	<div class="container">
+		<div class="page-content__search-result search-result search-result--not-found">
+			<div class="search-result__info-block info-block">
+				<h1 class="info-block__title info-block__title--l title title--max">Упс...</h1>
+				<p class="info-block__description description">
+					По вашему запросу, у нас ничего не нашлось,
+					но если у вас есть идея, которую вы хотите реализовать,то отправьте её нам на почту со своими контактами,мы с
+					вами
+					свяжемся и вместе найдем решение.
+				</p>
+				<div class="info-block__email email">
+					<span class="email__label">Наша почта:</span>
+					<a href="mailto:wleproduction@gmail.com" class="email__link">wleproduction@gmail.com</a>
+				</div>
+				<div class="info-block__btn">
+					<a href="#" class="primary-btn primary-btn--xl">На главную</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+@@include("_footer.html",{
+	"subscribe": false
+})
