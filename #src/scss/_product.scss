@@ -350,7 +350,6 @@
 			line-height: 1.67;
 			color: $accent-500;
 			white-space: nowrap;
-			margin-right: 10px;
 
 			&::after {
 				content: "\00a0₴";
@@ -365,6 +364,7 @@
 				color: $accent-300;
 				text-decoration: line-through;
 				white-space: nowrap;
+				margin-left: 10px;
 
 				@media (min-width: 768px) {
 					font-size: 0.58em;

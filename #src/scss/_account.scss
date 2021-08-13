@@ -131,62 +131,6 @@
 	// .account-form__item
 
 	&__item {
-		pointer-events: none;
-
-		&.active{
-			pointer-events: initial;
-
-			.account-form__item-input{
-				border-color: $primary-200;
-			}
-		}
-	}
-
-	// .account-form__item-label
-
-	&__item-label {
-		display: inline-block;
-		padding-left: 10px;
-		margin-bottom: 4px;
-		color: $primary-200;
-		pointer-events: none;
-		font-size: 14px;
-
-		@media (min-width: 768px){
-			padding-left: 20px;
-		}
-	}
-
-	// .account-form__item-input-wrapper
-
-	&__item-input-wrapper {}
-
-	// .account-form__item-input
-
-	&__item-input {
-		width: 100%;
-		height: 44px;
-		border: 1px solid transparent;
-		border-radius: 100px;
-		padding: 10px;
-		font-size: 14px;
-		min-width: 0;
-
-		&:focus{
-			outline: none;
-		}
-
-		&[type="date"]::-webkit-calendar-picker-indicator {
-			display: none;
-		}
-
-		@media (min-width: 992px){
-			font-size: 16px;
-		}
-
-		@media (min-width: 768px){
-			padding: 10px 20px;
-		}
 	}
 
 	// .account-form__footer
@@ -213,4 +157,60 @@
 	// .account-form__cancel-btn
 
 	&__cancel-btn {}
+}
+
+.form-input{
+	&.disable{
+		pointer-events: none;
+
+		.form-input__input{
+			border-color: transparent;
+		}
+	}
+
+
+	// .form-input__label
+	&__label{
+		display: inline-block;
+		padding-left: 10px;
+		margin-bottom: 4px;
+		color: $primary-200;
+		font-size: 14px;
+
+		@media (min-width: 768px) {
+			padding-left: 20px;
+		}
+	}
+
+	// .form-input__input-wrapper
+	&__input-wrapper{
+
+	}
+
+	// .form-input__input
+	&__input{
+		width: 100%;
+		height: 44px;
+		border: 1px solid $primary-200;
+		border-radius: 100px;
+		padding: 10px;
+		font-size: 14px;
+		min-width: 0;
+
+		&:focus {
+			outline: none;
+		}
+
+		&[type="date"]::-webkit-calendar-picker-indicator {
+			display: none;
+		}
+
+		@media (min-width: 992px) {
+			font-size: 16px;
+		}
+
+		@media (min-width: 768px) {
+			padding: 10px 20px;
+		}
+	}
 }

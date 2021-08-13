@@ -163,6 +163,21 @@
 }
 
 .checkbox {
+
+	// .checkbox--round
+
+	&--round {
+		.checkbox__label{
+			&::before{
+				border-radius: 50%;
+			}
+
+			&::after{
+				transform: rotate(-45deg) scale(0.9);
+			}
+		}
+
+	}
 	// .checkbox__label
 
 	&__label {
@@ -184,6 +199,7 @@
 			cursor: pointer;
 			margin-right: 10px;
 			transition: all .3s;
+			overflow: hidden;
 		}
 
 		&::after{

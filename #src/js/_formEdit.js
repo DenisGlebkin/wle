@@ -15,7 +15,7 @@ class FormEdit{
 		currentEditBtn.classList.toggle("visually-hidden");
 		currentForm.classList.toggle("active");
 		currentFormItems.forEach(formItem =>{
-			formItem.classList.toggle("active");
+			formItem.classList.toggle("disable");
 		})
 	 }
 

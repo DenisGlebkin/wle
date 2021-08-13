@@ -1,0 +1,177 @@
+@@include("_header.html",{
+	"title": "Оформление заказа"
+})
+<div class="page-content">
+	<div class="container">
+		<form class="order">
+			<h1 class="order__title title">Оформление заказа</h1>
+			<div class="order__content">
+				<main class="order__info">
+					<div class="order__info-item" data-order="contacts">
+						<h2 class="order__info-item-title heading heading--normal">Ваши контактные данные</h2>
+						<div class="order__info-item-inputs">
+							<div class="order__info-item-input form-input">
+								<label for="surname" class="form-input__label">Фамилия</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="surname" name="surname">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="name" class="form-input__label">Имя</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="name" name="name">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="phone" class="form-input__label">Номер телефона</label>
+								<div class="form-input__input-wrapper">
+									<input type="tel" class="form-input__input" id="phone" name="phone">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="city" class="form-input__label">Город</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="city" name="city">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="order__info-item" data-order="delivery">
+						<h2 class="order__info-item-title heading heading--normal">Доставка</h2>
+						<div class="order__info-item-checkboxes">
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="delivery" class="visually-hidden" value="pickup" checked>
+								<span class="checkbox__label">Самовывоз в Киеве</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="delivery" class="visually-hidden" value="courier">
+								<span class="checkbox__label">Доставка по адресу</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="delivery" class="visually-hidden" value="novaPoshta">
+								<span class="checkbox__label">В отделение Новой Почты</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="delivery" class="visually-hidden" value="novaPoshtaCourier">
+								<span class="checkbox__label">Курьером Новой Почты</span>
+							</label>
+						</div>
+					</div>
+					<div class="order__info-item" data-order="payment">
+						<h2 class="order__info-item-title heading heading--normal">Оплата</h2>
+						<div class="order__info-item-checkboxes">
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="payment" class="visually-hidden" value="onDelivery" checked>
+								<span class="checkbox__label">Наличными при получении</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="payment" class="visually-hidden" value="online">
+								<span class="checkbox__label">Онлайн оплата</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="payment" class="visually-hidden" value="privatePay">
+								<span class="checkbox__label">PrivatPay</span>
+							</label>
+						</div>
+					</div>
+					<div class="order__info-item" data-order="recipient">
+						<h2 class="order__info-item-title heading heading--normal">Данные получателя</h2>
+						<h3 class="order__info-item-subtitle heading heading--normal">Кто получатель?</h3>
+						<div class="order__info-item-checkboxes">
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="recipient" class="visually-hidden" value="currentCustomer" checked>
+								<span class="checkbox__label">Я</span>
+							</label>
+							<label class="order__info-item-checkbox checkbox checkbox--round">
+								<input type="radio" name="recipient" class="visually-hidden" value="anotherCustomer">
+								<span class="checkbox__label">Другой человек</span>
+							</label>
+						</div>
+						<div class="order__info-item-inputs spoiler">
+							<div class="order__info-item-input form-input">
+								<label for="acSurname" class="form-input__label">Фамилия</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="acSurname" name="acSurname">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="acName" class="form-input__label">Имя</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="acName" name="acName">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="acPhone" class="form-input__label">Номер телефона</label>
+								<div class="form-input__input-wrapper">
+									<input type="tel" class="form-input__input" id="acPhone" name="acPhone">
+								</div>
+							</div>
+							<div class="order__info-item-input form-input">
+								<label for="acCity" class="form-input__label">Город</label>
+								<div class="form-input__input-wrapper">
+									<input type="text" class="form-input__input" id="acCity" name="acCity">
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<aside class="order__products">
+					<div class="order__products-header">
+						<h2 class="order__products-title heading heading--l heading--normal">Корзина</h2>
+						<a href="#" class="order__products-edit-link link">Редактировать</a>
+					</div>
+					<ul class="order__products-list">
+						<li class="order__products-list-item item-product">
+							<a href="#" class="item-product__thumbnail-link">
+								<div class="item-product__thumbnail-wrapper">
+									<img src="images/orders-list/thumbnail_1.jpg" alt="thumbnail product" class="item-product__thumbnail">
+								</div>
+							</a>
+							<div class="item-product__info">
+								<h2 class="item-product__name"><a href="#" class="item-product__link">Круглый журнальный столик с
+										заливкой эпоксидной смолой</a></h2>
+								<div class="item-product__quantity">1</div>
+							</div>
+							<div class="item-product__price product-prices--sm product-prices--column">
+								<span class="product-prices__price">6000</span>
+								<span class="product-prices__price product-prices__price--old">7500</span>
+							</div>
+						</li>
+						<li class="order__products-list-item item-product">
+							<a href="#" class="item-product__thumbnail-link">
+								<div class="item-product__thumbnail-wrapper">
+									<img src="images/orders-list/thumbnail_1.jpg" alt="thumbnail product" class="item-product__thumbnail">
+								</div>
+							</a>
+							<div class="item-product__info">
+								<h2 class="item-product__name"><a href="#" class="item-product__link">Круглый журнальный столик с
+										заливкой эпоксидной смолой</a></h2>
+								<div class="item-product__quantity">1</div>
+							</div>
+							<div class="item-product__price product-prices--sm product-prices--column">
+								<span class="product-prices__price">6000</span>
+							</div>
+						</li>
+					</ul>
+					<div class="order__products-rows" data-da=".order__content,991,last">
+						<div class="order__products-row">
+							<div class="order__products-label">Стоимость доставки</div>
+							<div class="order__products-text">По тарифам перевозчика</div>
+						</div>
+						<div class="order__products-row">
+							<div class="order__products-label">Всего к оплате</div>
+							<div class="order__products-total product-prices"><span class="product-prices__price">6 200</span></div>
+						</div>
+					</div>
+					<div class="order__products-footer" data-da=".order__content,991,last">
+						<button type="submit" class="order__products-submit primary-btn">Оформить заказ</button>
+						<div class="order__products-privacy">Оформляя заказ, я принимаю условия <a href="#" class="link">политики конфидециальности</a></div>
+					</div>
+				</aside>
+			</div>
+		</form>
+	</div>
+</div>
+@@include("_footer.html",{
+"subscribe": false
+})

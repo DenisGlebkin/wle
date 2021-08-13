@@ -105,6 +105,7 @@
 	@@include("_orderProducts.js");
 	@@include("_wishlist.js");
 	@@include("_reviews-spoilers.js");
+	@@include("ordering.js");
 
 	const accordeon = new MenuAccordeon(".menu__list-item");
 	const burger = new BurgerMenu({
@@ -113,9 +114,11 @@
 		resolution: 991,
 		effect: "sideSlide"
 	});
-	if (document.querySelector(".filters")) const filtersSpoilers = new Filters();
+
+	if(document.querySelector(".filters")) const filtersSpoilers = new Filters();
 	if(document.querySelector(".account-form")) const formEdit = new FormEdit();
 	if(document.querySelector(".item-order")) const orderProducts = new OrderProducts();
-	if (document.querySelector(".product-card__checkbox")) const wishlistItem = new WishlistItem();
-	if (document.querySelector(".review-product-item")) const reviewsSpoilerItems = new ReviewsSpoilers();
+	if(document.querySelector(".product-card__checkbox")) const wishlistItem = new WishlistItem();
+	if(document.querySelector(".review-product-item")) const reviewsSpoilerItems = new ReviewsSpoilers();
+	if (document.querySelector(".order__info-item")) const ordering = new Ordering();
 }())

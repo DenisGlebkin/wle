@@ -181,7 +181,7 @@ if (priceSlider) {
 		this.screenWidth = params.resolution ? params.resolution : 768;
 		this.popupBg = document.querySelector(".header__popup-bg");
 
-		this.load(this.screenWidth);
+		// this.load(this.screenWidth);
 		this.createEvents();
 	}
 
@@ -201,12 +201,14 @@ if (priceSlider) {
 
 	load() {
 		if (document.body.offsetWidth > this.screenWidth) {
-			this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(0%)" : this.menuBody.style.height = "auto";
+			// this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(0%)" : this.menuBody.style.height = "auto";
 		} else {
-			this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(-100%)" : this.menuBody.style.height = "0px";
+			// this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(-100%)" : this.menuBody.style.height = "0px";
 
 			if (this.menuBtn.classList.contains(this.menuBtnActiveClass)) this.toggleMenu();
 		}
+
+		if (!(document.body.offsetWidth > this.screenWidth) && this.menuBtn.classList.contains(this.menuBtnActiveClass)) this.toggleMenu();
 	}
 
 
@@ -331,7 +333,7 @@ if (priceSlider) {
 		currentEditBtn.classList.toggle("visually-hidden");
 		currentForm.classList.toggle("active");
 		currentFormItems.forEach(formItem =>{
-			formItem.classList.toggle("active");
+			formItem.classList.toggle("disable");
 		})
 	 }
 
@@ -515,6 +517,38 @@ if (priceSlider) {
 		})
 	}
 };
+	class Ordering{
+	constructor(){
+		this.orderInfoItems = document.querySelectorAll(".order__info-item");
+		this.orderInfoItemsRecipient = null;
+
+		this.orderRecipientLoad();
+		this.createEvents();
+	}
+
+	orderRecipientLoad(event){
+		this.orderInfoItemsRecipient = [...this.orderInfoItems].filter(orderInfoItemRecipient => {
+			return orderInfoItemRecipient.dataset.order == "recipient"
+		})
+	}
+
+	toggleRecipientData(event){
+		const checkboxInput = event.target,
+					orderItemRecipient = findParent(checkboxInput, "order__info-item-checkboxes").nextElementSibling
+		;
+
+		orderItemRecipient.classList.toggle("active");
+		spoiler(orderItemRecipient, orderItemRecipient.classList.contains("active"));
+	}
+
+	createEvents(){
+		this.orderInfoItemsRecipient.forEach(orderInfoItemRecipient =>{
+			orderInfoItemRecipient.querySelectorAll(".checkbox").forEach(recipientCheckbox =>{
+				recipientCheckbox.addEventListener("change", this.toggleRecipientData.bind(this))
+			})
+		})
+	}
+};
 
 	const accordeon = new MenuAccordeon(".menu__list-item");
 	const burger = new BurgerMenu({
@@ -523,9 +557,11 @@ if (priceSlider) {
 		resolution: 991,
 		effect: "sideSlide"
 	});
-	if (document.querySelector(".filters")) const filtersSpoilers = new Filters();
+
+	if(document.querySelector(".filters")) const filtersSpoilers = new Filters();
 	if(document.querySelector(".account-form")) const formEdit = new FormEdit();
 	if(document.querySelector(".item-order")) const orderProducts = new OrderProducts();
-	if (document.querySelector(".product-card__checkbox")) const wishlistItem = new WishlistItem();
-	if (document.querySelector(".review-product-item")) const reviewsSpoilerItems = new ReviewsSpoilers();
+	if(document.querySelector(".product-card__checkbox")) const wishlistItem = new WishlistItem();
+	if(document.querySelector(".review-product-item")) const reviewsSpoilerItems = new ReviewsSpoilers();
+	if (document.querySelector(".order__info-item")) const ordering = new Ordering();
 }())

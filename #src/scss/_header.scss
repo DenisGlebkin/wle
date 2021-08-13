@@ -24,6 +24,10 @@
 		padding: 60px 15px;
 		transition: transform .5s;
 
+		@media (max-width: 991px){
+			transform: translateX(-100%);
+		}
+
 		@media (min-width: 1200px) {
 			flex: 0 1 540px;
 		}

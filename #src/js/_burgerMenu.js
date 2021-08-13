@@ -12,7 +12,7 @@ class BurgerMenu {
 		this.screenWidth = params.resolution ? params.resolution : 768;
 		this.popupBg = document.querySelector(".header__popup-bg");
 
-		this.load(this.screenWidth);
+		// this.load(this.screenWidth);
 		this.createEvents();
 	}
 
@@ -32,12 +32,14 @@ class BurgerMenu {
 
 	load() {
 		if (document.body.offsetWidth > this.screenWidth) {
-			this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(0%)" : this.menuBody.style.height = "auto";
+			// this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(0%)" : this.menuBody.style.height = "auto";
 		} else {
-			this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(-100%)" : this.menuBody.style.height = "0px";
+			// this.isSideSlideEffect ? this.menuBody.style.transform = "translateX(-100%)" : this.menuBody.style.height = "0px";
 
 			if (this.menuBtn.classList.contains(this.menuBtnActiveClass)) this.toggleMenu();
 		}
+
+		if (!(document.body.offsetWidth > this.screenWidth) && this.menuBtn.classList.contains(this.menuBtnActiveClass)) this.toggleMenu();
 	}
 
 
