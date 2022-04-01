@@ -17,30 +17,38 @@
 					submenuWrapper.style.height = "auto";
 				}
 			})
-
 		}
 
 		toggleContent(event) {
 			let cuurentBtn = event.currentTarget,
 				currentContent = cuurentBtn.querySelector(".menu__submenu");
 
-			if (checkMobile() && window.innerWidth >= 992) {
-				this.accordeonButtons.forEach(button => {
-					if (button !== cuurentBtn) button.classList.remove("shown");
-				})
-			}
-			cuurentBtn.classList.toggle("shown");
+			// if (checkMobile() && window.innerWidth >= 992) {
+			// 	this.accordeonButtons.forEach(button => {
+			// 		if (button !== cuurentBtn) button.classList.remove("shown");
+			// 	})
+			// }
 
-			if (checkMobile() && window.innerWidth < 992) {
+			// if (checkMobile() && window.innerWidth < 992) {
+			// 	cuurentBtn.classList.toggle("shown");
 
-				spoiler(currentContent, cuurentBtn.classList.contains("shown"));
+			// 	spoiler(currentContent, cuurentBtn.classList.contains("shown"));
 
-				// if (cuurentBtn.classList.contains("shown")){
-				// 	currentContent.style.height = `${currentContent.scrollHeight}px`;
-				// }
-				// else{
-				// 	currentContent.style.height = `0`
-				// }
+			// 	// if (cuurentBtn.classList.contains("shown")){
+			// 	// 	currentContent.style.height = `${currentContent.scrollHeight}px`;
+			// 	// }
+			// 	// else{
+			// 	// 	currentContent.style.height = `0`
+			// 	// }
+			// }
+
+			if(checkMobile()){
+				this.accordeonButtons.forEach((button) => {
+          if (button !== cuurentBtn) button.classList.remove("shown");
+        });
+
+				cuurentBtn.classList.toggle("shown");
+        spoiler(currentContent, cuurentBtn.classList.contains("shown"));
 			}
 		}
 
